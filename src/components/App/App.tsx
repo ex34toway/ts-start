@@ -6,13 +6,12 @@ import './App.less';
 
 export class App extends React.Component<undefined, undefined> {
   onLikeButtonCliked = function (e: any) {
-    debugger;
   }
   render() {
     return (
       <div className="root_container">
         <Moo name="Foo" />
-        <LikeButton text="Like" handleClick={this.onLikeButtonCliked} />
+        <LikeButton like="Like" handleClick={this.onLikeButtonCliked} liked="Liked"/>
         <AuthorDiv author="Liliang" children="Think Frontend in React.js" />
       </div>
     );
