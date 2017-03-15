@@ -1,4 +1,5 @@
 const path = require('path');
+const CleanPlugin = require("clean-webpack-plugin");
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
@@ -51,6 +52,7 @@ module.exports = {
     assetsPluginInstance,
     new CommonsChunkPlugin({
       names: ['vendor', 'manifest']
-    })
+    }),
+    new CleanPlugin(['dist']),
   ]
 }

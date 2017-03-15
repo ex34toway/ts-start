@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Moo } from '../Moo';
 import { LikeButton } from "../LikeButton";
 import { AuthorDiv } from "../AuthorDiv";
+import { MySelect } from "../Select";
 import './App.less';
 
 export class App extends React.Component<undefined, undefined> {
@@ -11,8 +12,9 @@ export class App extends React.Component<undefined, undefined> {
     return (
       <div className="root_container">
         <Moo name="Foo" />
-        <LikeButton like="Like" handleClick={this.onLikeButtonCliked} liked="Liked"/>
+        <LikeButton like="Like" handleClick={this.onLikeButtonCliked} liked="Liked" />
         <AuthorDiv author="Liliang" children="Think Frontend in React.js" />
+        <MySelect foo="Test" />
       </div>
     );
   }
